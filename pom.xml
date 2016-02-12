@@ -215,6 +215,9 @@
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+	</build>
 	<profiles>
 		<profile>
 			<!-- When built in OpenShift the 'openshift' profile will be used when 
@@ -232,6 +235,14 @@
 						<artifactId>maven-war-plugin</artifactId>
 						<version>2.1.1</version>
 						<configuration>
+							<warSourceDirectory>WebContent</warSourceDirectory>
+							<webResources>
+								<resource>
+									<targetPath>WEB-INF/spring</targetPath>
+									<directory>spring</directory>
+								</resource>
+							</webResources>
+							<failOnMissingWebXml>false</failOnMissingWebXml>
 							<outputDirectory>webapps</outputDirectory>
 							<warName>ROOT</warName>
 						</configuration>
