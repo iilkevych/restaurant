@@ -229,6 +229,10 @@
 							<targetPath>WEB-INF/spring</targetPath>
 							<directory>spring</directory>
 						</resource>
+						<resource>
+							<targetPath>WEB-INF/classes</targetPath>
+							<directory>logging</directory>
+						</resource>
 					</webResources>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<outputDirectory>webapps</outputDirectory>
