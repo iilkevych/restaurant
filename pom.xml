@@ -226,7 +226,7 @@
 					<warSourceDirectory>WebContent</warSourceDirectory>
 					<webResources>
 						<resource>
-							<targetPath>spring</targetPath>
+							<targetPath>WEB-INF/spring</targetPath>
 							<directory>spring</directory>
 						</resource>
 						<resource>
