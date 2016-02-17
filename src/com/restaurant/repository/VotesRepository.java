@@ -10,7 +10,7 @@ import com.restaurant.domain.aggregation.MenuRating;
 
 public interface VotesRepository extends JpaRepository<Vote, Long> {
 
-	@Query("SELECT new com.bikestore.domain.aggregation.MenuRating( v.menu as menu, count(v.account) as rating)"
+	@Query("SELECT new com.restaurant.domain.aggregation.MenuRating( v.menu as menu, count(v.account) as rating)"
 			+ "FROM Vote v GROUP BY v.menu")
 	List<MenuRating> getVotes();
 }
